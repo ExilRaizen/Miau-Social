@@ -1,3 +1,7 @@
+¡Entendido! Tienes razón, si el repositorio ya está bajo tu nombre de usuario, repetir "Desarrollado por" en un bloque aparte sobra y rompe la estética del perfil.
+
+Aquí tienes el contenido definitivo y limpio para tu `README.md`. He eliminado esa frase final y ajustado el formato para que todo fluya mejor visualmente:
+
 ```markdown
 # 🐾 Miau Social - Discord Webhook Bot
 
@@ -5,63 +9,70 @@ Sistema de notificaciones automáticas que conecta publicaciones de redes social
 
 ## 🚀 Características
 - **Recepción de Webhooks**: Escucha peticiones POST en el puerto 3000.
-- **Automatización**: Integración fluida con Make.com para detectar nuevos posts.
-- **Persistencia**: Gestión de procesos 24/7 con **PM2** para asegurar que el bot nunca se apague.
-- **Seguridad**: Uso de variables de entorno para proteger tokens y credenciales.
+- **Automatización**: Integración con Make.com para detectar nuevos posts.
+- **Persistencia**: Gestión 24/7 con **PM2** para evitar caídas del servicio.
+- **Seguridad**: Uso de variables de entorno para proteger credenciales y tokens.
+
+---
 
 ## 🛠️ Tecnologías
-- **Entorno**: Node.js v20+.
-- **Framework Web**: Express.js.
-- **Librería de Bot**: Discord.js v14.
-- **Servidor**: Ubuntu 24.04 LTS en Oracle Cloud.
-- **Automatización**: Make (Integromat).
+- **Entorno**: Node.js v20+
+- **Framework Web**: Express.js
+- **Librería de Bot**: Discord.js v14
+- **Servidor**: Ubuntu 24.04 LTS (Oracle Cloud Infrastructure)
+- **Automatización**: Make (Integromat)
 
-## 📖 Tutorial de Funcionamiento y Configuración
+---
 
-### 1. ¿Cómo funciona este sistema?
-El flujo de automatización sigue estos pasos para garantizar notificaciones instantáneas:
-* **Detección**: Un escenario en **Make.com** monitorea las cuentas de RRSS (Instagram/TikTok) cada 15 minutos.
-* **Envío de datos**: Cuando se detecta un nuevo post, Make envía una solicitud POST (Webhook) a la IP pública del servidor por el puerto 3000.
-* **Procesamiento**: El servidor **Node.js**, gestionado por **PM2**, recibe la información y valida los datos.
-* **Notificación**: El bot utiliza la librería **Discord.js** para enviar un mensaje al canal configurado.
+## 📖 Tutorial de Funcionamiento
 
-### 2. Configuración del archivo `.env`
-Por seguridad, el archivo de credenciales no se incluye en el repositorio. Debes crear un archivo llamado `.env` en la raíz del proyecto para definir las variables de entorno:
+**1. Flujo del sistema**
+* **Detección**: Make.com monitorea las RRSS cada 15 minutos.
+* **Envío**: Se envía una solicitud POST a la IP del servidor por el puerto 3000.
+* **Procesamiento**: Node.js y PM2 validan y procesan los datos entrantes.
+* **Notificación**: El bot envía el mensaje formateado al canal de Discord configurado.
+
+**2. Configuración del archivo .env**
+Crea un archivo llamado `.env` en la raíz del proyecto para definir las variables de entorno:
 
 ```env
 TOKEN=tu_token_de_discord_aqui
-CANAL_ID=id_del_canal_donde_publicara_el_bot
+CANAL_ID=id_del_canal_aqui
 PORT=3000
 
 ```
 
-### 3. Instalación e inicio en el Servidor (Bash)
+---
 
-Debes ejecutar estos comandos en la terminal de tu servidor (Ubuntu) para preparar el área de trabajo e iniciar el bot:
+## 💻 Instalación e inicio (Bash)
+
+Ejecuta estos comandos en la terminal de tu servidor para preparar el área de trabajo e iniciar el bot:
 
 ```bash
-# Instalar dependencias necesarias
+# Instalar dependencias
 npm install
 
-# Iniciar el bot con PM2 para ejecución en segundo plano
+# Iniciar el bot con PM2
 pm2 start index.js --name "miau-social-bot"
 
-# Guardar la lista de procesos para reinicios automáticos del sistema
+# Configurar reinicio automático tras fallos del sistema
 pm2 save
 
 ```
 
-### 4. Configuración en Make.com
+---
 
-* Crea un escenario que vigile tus RRSS.
-* Añade un módulo **HTTP (Make a request)** que envíe un JSON a: `http://TU_IP:3000/webhook`.
+## ⚙️ Configuración en Make.com
+
+* Crea un escenario para vigilar las redes sociales deseadas.
+* Añade un módulo **HTTP (Make a request)** hacia: `http://TU_IP:3000/webhook`.
 * El cuerpo (body) de la petición debe contener los campos: `plataforma`, `enlace` y `mensaje`.
 
 ---
 
-Desarrollado por [ExilRaizen]
+## 📩 Contacto
 
-```
+Si tienes dudas o quieres contactarme para proyectos, puedes encontrarme en:
 
-
-
+* **Discord**: exilraizen
+* **LinkedIn**: [Italo Antonio Campodonico Miranda](https://www.linkedin.com/in/italo-antonio-campodonico-miranda-236b6b323/)
