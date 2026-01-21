@@ -1,32 +1,30 @@
-Entiendo perfectamente. El error fue que mi explicación de los comandos de Git se quedó atrapada dentro del bloque de texto que debías copiar, lo que hacía que el `README.md` se viera mal en GitHub.
-
-Aquí tienes el bloque **único y limpio** para tu archivo. No incluiré ninguna explicación fuera del código para que no se mezcle nada.
-
-```markdown
 # 🐾 Miau Social - Discord Webhook Bot
 
 Sistema de notificaciones automáticas que conecta publicaciones de redes sociales (Instagram/TikTok) con Discord utilizando **Node.js**, **Express** y **Make.com**, alojado en una infraestructura de alto rendimiento en **Oracle Cloud**.
 
 ## 🚀 Características
-- **Recepción de Webhooks**: Escucha peticiones POST en el puerto 3000.
-- **Automatización**: Integración con Make.com para detectar nuevos posts.
-- **Persistencia**: Gestión 24/7 con **PM2** para evitar caídas del servicio.
-- **Seguridad**: Uso de variables de entorno para proteger credenciales y tokens.
+
+* **Recepción de Webhooks**: Escucha peticiones POST en el puerto 3000.
+* **Automatización**: Integración con Make.com para detectar nuevos posts.
+* **Persistencia**: Gestión 24/7 con **PM2** para evitar caídas del servicio.
+* **Seguridad**: Uso de variables de entorno para proteger credenciales y tokens.
 
 ---
 
 ## 🛠️ Tecnologías
-- **Entorno**: Node.js v20+
-- **Framework Web**: Express.js
-- **Librería de Bot**: Discord.js v14
-- **Servidor**: Ubuntu 24.04 LTS (Oracle Cloud Infrastructure)
-- **Automatización**: Make (Integromat)
+
+* **Entorno**: Node.js v20+
+* **Framework Web**: Express.js
+* **Librería de Bot**: Discord.js v14
+* **Servidor**: Ubuntu 24.04 LTS (Oracle Cloud Infrastructure)
+* **Automatización**: Make (Integromat)
 
 ---
 
 ## 📖 Tutorial de Funcionamiento
 
 **1. Flujo del sistema**
+
 * **Detección**: Make.com monitorea las RRSS cada 15 minutos.
 * **Envío**: Se envía una solicitud POST a la IP del servidor por el puerto 3000.
 * **Procesamiento**: Node.js y PM2 validan y procesan los datos entrantes.
@@ -76,5 +74,3 @@ Si tienes dudas o quieres contactarme para proyectos, puedes encontrarme en:
 
 * **Discord**: exilraizen
 * **LinkedIn**: [Italo Antonio Campodonico Miranda](https://www.linkedin.com/in/italo-antonio-campodonico-miranda-236b6b323/)
-
-```
