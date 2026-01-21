@@ -1,6 +1,6 @@
-¡Entendido! Tienes razón, si el repositorio ya está bajo tu nombre de usuario, repetir "Desarrollado por" en un bloque aparte sobra y rompe la estética del perfil.
+Entiendo perfectamente. El error fue que mi explicación de los comandos de Git se quedó atrapada dentro del bloque de texto que debías copiar, lo que hacía que el `README.md` se viera mal en GitHub.
 
-Aquí tienes el contenido definitivo y limpio para tu `README.md`. He eliminado esa frase final y ajustado el formato para que todo fluya mejor visualmente:
+Aquí tienes el bloque **único y limpio** para tu archivo. No incluiré ninguna explicación fuera del código para que no se mezcle nada.
 
 ```markdown
 # 🐾 Miau Social - Discord Webhook Bot
@@ -76,3 +76,5 @@ Si tienes dudas o quieres contactarme para proyectos, puedes encontrarme en:
 
 * **Discord**: exilraizen
 * **LinkedIn**: [Italo Antonio Campodonico Miranda](https://www.linkedin.com/in/italo-antonio-campodonico-miranda-236b6b323/)
+
+```
